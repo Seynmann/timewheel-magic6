@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f4ef" />
+    <title>TimeWheel</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css?v=3" />
+  </head>
+  <body>
+    <div class="phone-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow" id="todayLabel">今天</p>
+          <h1>TimeWheel</h1>
+        </div>
+        <button class="score-pill" id="openRewards" type="button" aria-label="查看积分段位">
+          <span id="scoreValue">0</span>
+          <small id="rankName">初醒者</small>
+        </button>
+      </header>
+
+      <main id="app"></main>
+
+      <nav class="tabbar" aria-label="主导航">
+        <button class="tab active" data-view="home" type="button">
+          <span>⌁</span>
+          日程
+        </button>
+        <button class="tab" data-view="habits" type="button">
+          <span>◌</span>
+          习惯
+        </button>
+        <button class="tab" data-view="countdown" type="button">
+          <span>⌛</span>
+          倒数
+        </button>
+        <button class="tab" data-view="rewards" type="button">
+          <span>✦</span>
+          成长
+        </button>
+      </nav>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop hidden" id="shareModal" role="dialog" aria-modal="true">
+      <section class="share-card">
+        <button class="icon-button close" id="closeShare" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">滴水穿石</p>
+        <h2 id="shareTitle">第 21 天，石上有痕</h2>
+        <p id="shareCopy">微小的坚持开始变得可见。继续向前。</p>
+        <canvas id="shareCanvas" width="720" height="960"></canvas>
+        <button class="primary full" id="downloadShare" type="button">导出分享图</button>
+      </section>
+    </div>
+
+    <script src="app.js?v=3" defer></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "appId": "com.timewheel.magic6",
+  "appName": "TimeWheel",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "android": {
+    "backgroundColor": "#f7f4ef"
+  }
+}
